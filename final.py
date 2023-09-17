@@ -49,7 +49,7 @@ def nacti(option):
 
     return zavodnik[0:i].strip()
 
-for k in range(0,2):
+for k in range(0,3):
     zavodnice = [0,0,0]
     casy = [0,0,0]
     zavodnice[0] = nacti('a')
@@ -66,6 +66,7 @@ for k in range(0,2):
 
     for i in range(0,3):
         z = casy.index(min(casy)) 
+        zavodnice[z] = zavodnice[z] + ' ' + str(casy[z])
         print(zavodnice[z] + ' ' + str(3*k + i + 1))
         casy[z] = 100000000000000000
 
